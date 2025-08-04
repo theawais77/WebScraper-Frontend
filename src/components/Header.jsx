@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Header = () => {
   return (
@@ -13,15 +12,10 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-gray-900">PropertyScraper</h1>
-              <p className="text-sm text-gray-600">Real Estate Listings Aggregator</p>
+              <p className="text-sm text-gray-600">Real Estate Listings Using AirBnb</p>
             </div>
           </div>
-          <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span>Live Data</span>
-            </div>
-          </div>
+          
         </div>
       </div>
     </header>
