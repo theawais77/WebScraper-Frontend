@@ -90,6 +90,15 @@ const PropertyCard = ({ property }) => {
           )}
         </div>
 
+        {/* Property Type */}
+        {property.type && (
+          <div className="mb-4">
+            <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-medium">
+              {property.type}
+            </span>
+          </div>
+        )}
+
         {/* Action Button */}
         {property.link && (
           <a
@@ -132,6 +141,12 @@ const Grid = ({ listings }) => {
           <p className="text-gray-600 mb-6 max-w-md mx-auto">
             We couldn't find any property listings at the moment. Try refreshing to get the latest data.
           </p>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+          >
+            Refresh Page
+          </button>
         </div>
       </div>
     );
@@ -158,6 +173,26 @@ const Grid = ({ listings }) => {
           />
         ))}
       </div>
+
+      {/* Load More Section (if needed) */}
+      {validListings.length > 0 && (
+        <div className="mt-12 text-center">
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              End of Results
+            </h3>
+            <p className="text-gray-600 mb-4">
+              You've viewed all {validListings.length} available properties
+            </p>
+            <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>All listings displayed</span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
