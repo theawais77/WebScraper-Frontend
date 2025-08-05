@@ -105,7 +105,7 @@ const PropertyCard = ({ property }) => {
             href={property.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center"
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-gray-500 hover:to-gray-700 transition-all duration-200 flex items-center justify-center"
           >
             View Details
             <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
